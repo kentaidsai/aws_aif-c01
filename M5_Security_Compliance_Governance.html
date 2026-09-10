@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Module 5 · 安全、合規與治理</title><style>
+  :root{--navy:#1b2838;--navy2:#243447;--ink:#0f1722;--orange:#ff9900;--orange-d:#e17b00;
+    --teal:#1aa9a3;--teal-d:#128b86;--paper:#f6f8fb;--card:#fff;--line:#e4e9f0;--muted:#5f6b7a;--good:#1f9d61;
+    --sh:0 2px 10px rgba(20,30,45,.06),0 10px 30px rgba(20,30,45,.05);}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+    background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 22px 60px}
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#2c4a63 100%);
+    color:#fff;border-radius:22px;padding:34px 38px;position:relative;overflow:hidden;box-shadow:var(--sh)}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;
+    background:radial-gradient(circle,rgba(255,153,0,.28),transparent 68%)}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--orange);
+    background:rgba(255,153,0,.12);border:1px solid rgba(255,153,0,.35);padding:5px 12px;border-radius:999px}
+  h1{font-size:32px;font-weight:800;margin:14px 0 6px;letter-spacing:-.5px}
+  .hero .sub{font-size:15px;color:#c7d3e0;max-width:780px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    border-radius:10px;padding:8px 14px;font-size:13px;color:#e7eef6}
+  .chip b{color:#fff}
+  .obj{margin-top:14px;font-size:13px;color:#aeb9c7}.obj b{color:#ffcf8a;font-weight:700}
+  .section-h{display:flex;align-items:center;gap:12px;margin:36px 4px 16px}
+  .section-h .n{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+    background:var(--navy);color:#fff;font-weight:800;font-size:15px;flex:0 0 auto}
+  .section-h h2{font-size:20px;font-weight:800;letter-spacing:-.2px}
+  .section-h .en{font-size:12.5px;color:var(--muted);font-weight:600;letter-spacing:.05em}
+  .dims{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+  .dim{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 15px 14px;
+    box-shadow:var(--sh);border-top:3px solid var(--c)}
+  .dim .top{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+  .dim .ic{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;flex:0 0 auto;
+    background:color-mix(in srgb,var(--c) 14%,#fff);color:var(--c);font-size:16px}
+  .dim .no{font-size:11px;font-weight:800;color:var(--c);letter-spacing:.05em}
+  .dim h3{font-size:14.5px;font-weight:800;line-height:1.3}
+  .dim .en{font-size:11px;color:var(--muted);font-weight:600}
+  .dim p{font-size:12.2px;color:#48586a;margin-top:6px}
+  .dim .eg{font-size:11.4px;color:var(--muted);margin-top:7px;padding-top:7px;border-top:1px dashed var(--line)}
+  .dim .eg b{color:#3a4756}
+  .kc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .qcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:17px;box-shadow:var(--sh)}
+  .qcard .qn{font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--orange-d);text-transform:uppercase}
+  .qcard .q{font-size:13.5px;font-weight:700;margin:6px 0 10px;color:#22303f}
+  .ans{display:flex;gap:9px;align-items:flex-start;background:#edf9f1;border:1px solid #bfe6cf;border-radius:10px;padding:10px 12px}
+  .ans .ck{color:#fff;background:var(--good);width:20px;height:20px;border-radius:50%;
+    display:grid;place-items:center;font-size:12px;flex:0 0 auto;margin-top:1px}
+  .ans p{font-size:12.4px;color:#1d5138}.ans p b{color:#12492e}
+  .takeaway{margin-top:32px;background:linear-gradient(120deg,#fff7ea,#fdeede);
+    border:1px solid #f4d9a8;border-radius:16px;padding:20px 24px;display:flex;gap:15px;align-items:flex-start}
+  .takeaway .star{font-size:26px;line-height:1}
+  .takeaway h3{font-size:15px;font-weight:800;color:var(--orange-d);margin-bottom:4px}
+  .takeaway p{font-size:13.5px;color:#5a4a2e}
+  footer{margin-top:30px;text-align:center;font-size:11.5px;color:var(--muted)}
+  @media(max-width:920px){.dims{grid-template-columns:repeat(2,1fr)}.kc{grid-template-columns:1fr}h1{font-size:25px}}
+  @media(max-width:540px){.dims{grid-template-columns:1fr}}
+  @media print{body{background:#fff}.wrap{max-width:100%}.hero,.dim,.qcard{box-shadow:none}}
+</style></head><body><div class="wrap"><header class="hero"><span class="kicker">◆ Module 5 · Exam Prep: AWS Certified AI Practitioner (AIF-C01)</span><h1>安全、合規與治理</h1><div class="sub">Domain 5 — IAM、加密、監控、法規標準與資料治理的完整實務。</div><div class="obj"><b>學習目標：</b> 5.1 確保 AI 系統安全的方法 · 5.2 認識治理與合規法規</div><div class="hero-meta"><span class="chip">📑 共 <b>65</b> 張投影片</span><span class="chip">🎯 <b>2</b> 個任務陳述</span><span class="chip">⭐ 第二大 Domain</span></div></header><div class="section-h"><div class="n">1</div><div><h2>重點概念</h2><div class="en">Key Concepts · 共同責任 → IAM → 加密與監控 → 治理與法規</div></div></div><div class="dims"><div class="dim" style="--c:#e0568a"><div class="top"><div class="ic">🤝</div><div><div class="no">01</div></div></div><h3>共同責任模型</h3><div class="en">Shared Responsibility Model</div><p>AWS 負責「雲端本身的安全」（實體、硬體、網路、虛擬化）；客戶負責「雲端內的安全」（作業系統、應用、防火牆、帳號）。</p></div><div class="dim" style="--c:#d64545"><div class="top"><div class="ic">🔑</div><div><div class="no">02</div></div></div><h3>IAM 核心概念</h3><div class="en">IAM Users, Groups, Roles</div><p>User 代表個人身份，Group 讓政策批次套用，Role 提供臨時憑證；最佳實務是用角色取代長效憑證，並遵循最小權限原則。</p><div class="eg"><b>SageMaker Role Manager 簡化角色建立</b></div></div><div class="dim" style="--c:#3b7dd8"><div class="top"><div class="ic">🔒</div><div><div class="no">03</div></div></div><h3>靜態與傳輸加密</h3><div class="en">Encryption at Rest &amp; In Transit</div><p>SageMaker 預設對儲存資料加密（可用 AWS KMS 管金鑰）；傳輸則透過 TLS/SSL，分散式訓練可另啟用節點間加密。</p></div><div class="dim" style="--c:#1aa9a3"><div class="top"><div class="ic">🕵️</div><div><div class="no">04</div></div></div><h3>偵測與稽核服務</h3><div class="en">Detection &amp; Auditing</div><p>Amazon Macie 掃描 S3 找出敏感資料（PII）；AWS CloudTrail 記錄所有 API 呼叫供稽核追蹤。</p></div><div class="dim" style="--c:#7c6ce0"><div class="top"><div class="ic">🌐</div><div><div class="no">05</div></div></div><h3>VPC 與 PrivateLink</h3><div class="en">VPC &amp; PrivateLink</div><p>將 SageMaker 部署於私有子網路並停用網際網路存取，透過 VPC 介面端點（PrivateLink）安全連接 AWS 服務。</p></div><div class="dim" style="--c:#128b86"><div class="top"><div class="ic">🎯</div><div><div class="no">06</div></div></div><h3>AI 系統弱點</h3><div class="en">AI System Vulnerabilities</div><p>訓練資料、輸入輸出、模型本身（反演/竊取）與 LLM（Prompt Injection）皆可能是攻擊面，需全生命週期防護。</p></div><div class="dim" style="--c:#e17b00"><div class="top"><div class="ic">📇</div><div><div class="no">07</div></div></div><h3>模型治理工具</h3><div class="en">Model Governance Tools</div><p>SageMaker Model Registry 目錄化管理模型版本核准；Model Cards 記錄用途與風險；ML Lineage Tracking 視覺化端到端工作流程。</p></div><div class="dim" style="--c:#1b2838"><div class="top"><div class="ic">📜</div><div><div class="no">08</div></div></div><h3>合規與稽核服務</h3><div class="en">Compliance Services</div><p>AWS Artifact 隨需取得合規報告；Audit Manager 依框架收集稽核證據；Config 監控組態；Inspector 做安全評估；Trusted Advisor 給優化建議。</p></div><div class="dim" style="--c:#2e8b57"><div class="top"><div class="ic">🌍</div><div><div class="no">09</div></div></div><h3>新興 AI 法規標準</h3><div class="en">Emerging AI Regulations</div><p>ISO 42001/23894 評估管理風險、EU AI Act 依風險分級（不可接受/高風險/未受規範）、NIST AI RMF（治理/對應/衡量/管理）。</p></div><div class="dim" style="--c:#b0518f"><div class="top"><div class="ic">🗃️</div><div><div class="no">10</div></div></div><h3>資料治理三支柱</h3><div class="en">Data Governance Pillars</div><p>Curate（確保品質）、Understand（可發現與理解，如資料目錄/血緣）、Protect（隱私、安全與存取的平衡）。</p><div class="eg"><b>AWS Lake Formation · Glue Data Catalog</b></div></div><div class="dim" style="--c:#c0873b"><div class="top"><div class="ic">🪜</div><div><div class="no">11</div></div></div><h3>生成式 AI 安全範疇矩陣</h3><div class="en">GenAI Security Scoping Matrix</div><p>從使用公開生成式 AI 應用到自行訓練客製模型，五個範疇的治理與合規責任隨自訂程度遞增。</p></div></div><div class="section-h"><div class="n">✓</div><div><h2>隨堂測驗考點</h2><div class="en">Knowledge Checks</div></div></div><div class="kc"><div class="qcard"><div class="qn">Knowledge Check 1</div><div class="q">要在一處記錄模型細節以利報告與治理，該用哪個 SageMaker 功能？</div><div class="ans"><div class="ck">✓</div><p><b>Amazon SageMaker Model Cards</b>。</p></div></div><div class="qcard"><div class="qn">Knowledge Check 2</div><div class="q">需要文件證明 AWS 符合 AI 系統相關法規標準，該用哪個服務取得合規報告？</div><div class="ans"><div class="ck">✓</div><p><b>AWS Artifact</b>（提供隨需的合規報告與協議管理）。</p></div></div></div><div class="takeaway"><div class="star">⭐</div><div><h3>一句話總結</h3><p>把 Domain 5 拆成「<b>身份存取（IAM）× 加密監控 × 模型治理 × 法規合規</b>」四塊分別記憶，服務名稱與用途要一一對應。</p></div></div><footer>Module 5: Security, Compliance, and Governance for AI Solutions · Exam Prep: AWS Certified AI Practitioner (AIF-C01)</footer></div></body></html>

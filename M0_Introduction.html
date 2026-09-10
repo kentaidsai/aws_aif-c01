@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Module 0 · 課程介紹</title><style>
+  :root{--navy:#1b2838;--navy2:#243447;--ink:#0f1722;--orange:#ff9900;--orange-d:#e17b00;
+    --teal:#1aa9a3;--teal-d:#128b86;--paper:#f6f8fb;--card:#fff;--line:#e4e9f0;--muted:#5f6b7a;--good:#1f9d61;
+    --sh:0 2px 10px rgba(20,30,45,.06),0 10px 30px rgba(20,30,45,.05);}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+    background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 22px 60px}
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#2c4a63 100%);
+    color:#fff;border-radius:22px;padding:34px 38px;position:relative;overflow:hidden;box-shadow:var(--sh)}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;
+    background:radial-gradient(circle,rgba(255,153,0,.28),transparent 68%)}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--orange);
+    background:rgba(255,153,0,.12);border:1px solid rgba(255,153,0,.35);padding:5px 12px;border-radius:999px}
+  h1{font-size:32px;font-weight:800;margin:14px 0 6px;letter-spacing:-.5px}
+  .hero .sub{font-size:15px;color:#c7d3e0;max-width:780px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    border-radius:10px;padding:8px 14px;font-size:13px;color:#e7eef6}
+  .chip b{color:#fff}
+  .obj{margin-top:14px;font-size:13px;color:#aeb9c7}.obj b{color:#ffcf8a;font-weight:700}
+  .section-h{display:flex;align-items:center;gap:12px;margin:36px 4px 16px}
+  .section-h .n{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+    background:var(--navy);color:#fff;font-weight:800;font-size:15px;flex:0 0 auto}
+  .section-h h2{font-size:20px;font-weight:800;letter-spacing:-.2px}
+  .section-h .en{font-size:12.5px;color:var(--muted);font-weight:600;letter-spacing:.05em}
+  .dims{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+  .dim{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 15px 14px;
+    box-shadow:var(--sh);border-top:3px solid var(--c)}
+  .dim .top{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+  .dim .ic{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;flex:0 0 auto;
+    background:color-mix(in srgb,var(--c) 14%,#fff);color:var(--c);font-size:16px}
+  .dim .no{font-size:11px;font-weight:800;color:var(--c);letter-spacing:.05em}
+  .dim h3{font-size:14.5px;font-weight:800;line-height:1.3}
+  .dim .en{font-size:11px;color:var(--muted);font-weight:600}
+  .dim p{font-size:12.2px;color:#48586a;margin-top:6px}
+  .dim .eg{font-size:11.4px;color:var(--muted);margin-top:7px;padding-top:7px;border-top:1px dashed var(--line)}
+  .dim .eg b{color:#3a4756}
+  .kc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .qcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:17px;box-shadow:var(--sh)}
+  .qcard .qn{font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--orange-d);text-transform:uppercase}
+  .qcard .q{font-size:13.5px;font-weight:700;margin:6px 0 10px;color:#22303f}
+  .ans{display:flex;gap:9px;align-items:flex-start;background:#edf9f1;border:1px solid #bfe6cf;border-radius:10px;padding:10px 12px}
+  .ans .ck{color:#fff;background:var(--good);width:20px;height:20px;border-radius:50%;
+    display:grid;place-items:center;font-size:12px;flex:0 0 auto;margin-top:1px}
+  .ans p{font-size:12.4px;color:#1d5138}.ans p b{color:#12492e}
+  .takeaway{margin-top:32px;background:linear-gradient(120deg,#fff7ea,#fdeede);
+    border:1px solid #f4d9a8;border-radius:16px;padding:20px 24px;display:flex;gap:15px;align-items:flex-start}
+  .takeaway .star{font-size:26px;line-height:1}
+  .takeaway h3{font-size:15px;font-weight:800;color:var(--orange-d);margin-bottom:4px}
+  .takeaway p{font-size:13.5px;color:#5a4a2e}
+  footer{margin-top:30px;text-align:center;font-size:11.5px;color:var(--muted)}
+  @media(max-width:920px){.dims{grid-template-columns:repeat(2,1fr)}.kc{grid-template-columns:1fr}h1{font-size:25px}}
+  @media(max-width:540px){.dims{grid-template-columns:1fr}}
+  @media print{body{background:#fff}.wrap{max-width:100%}.hero,.dim,.qcard{box-shadow:none}}
+</style></head><body><div class="wrap"><header class="hero"><span class="kicker">◆ Module 0 · Exam Prep: AWS Certified AI Practitioner (AIF-C01)</span><h1>課程介紹</h1><div class="sub">認識 AIF-C01 考試涵蓋範圍、適合對象與課程進行方式。</div><div class="obj"><b>學習目標：</b> 考試五大 Domain 概覽 · 適合對象與先備經驗 · 課程流程與資源</div><div class="hero-meta"><span class="chip">📑 共 <b>6</b> 張投影片</span><span class="chip">🎯 課程暖身模組</span></div></header><div class="section-h"><div class="n">1</div><div><h2>重點概念</h2><div class="en">Key Concepts · 認證定位 → 對象 → 議程 → 教室須知</div></div></div><div class="dims"><div class="dim" style="--c:#e0568a"><div class="top"><div class="ic">🎓</div><div><div class="no">01</div></div></div><h3>認證定位</h3><div class="en">Certification Purpose</div><p>驗證你理解 AI/ML 概念、能為情境選擇合適技術，並負責任地使用。</p><div class="eg"><b>AIF-C01</b></div></div><div class="dim" style="--c:#d64545"><div class="top"><div class="ic">👥</div><div><div class="no">02</div></div></div><h3>適合對象</h3><div class="en">Target Audience</div><p>商業分析師、IT 支援、行銷、產品/專案經理、業務等非工程背景角色皆適用。</p><div class="eg"><b>建議具備最多 6 個月 AWS AI/ML 接觸經驗</b></div></div><div class="dim" style="--c:#3b7dd8"><div class="top"><div class="ic">🗺️</div><div><div class="no">03</div></div></div><h3>五大 Domain</h3><div class="en">Five Domains</div><p>Domain 1 AI/ML 基礎 → 2 生成式 AI 基礎 → 3 基礎模型應用 → 4 負責任 AI → 5 安全合規治理。</p></div><div class="dim" style="--c:#1aa9a3"><div class="top"><div class="ic">⚖️</div><div><div class="no">04</div></div></div><h3>配分權重</h3><div class="en">Domain Weighting</div><p>各 Domain 佔比不同，但每個都必須理解，題目會綜合情境跨主題考。</p></div><div class="dim" style="--c:#7c6ce0"><div class="top"><div class="ic">🏫</div><div><div class="no">05</div></div></div><h3>教室邏輯</h3><div class="en">Course Logistics</div><p>課程涵蓋休息、午餐、虛擬教室互動方式（音訊、聊天、舉手）等基本安排。</p></div><div class="dim" style="--c:#128b86"><div class="top"><div class="ic">📚</div><div><div class="no">06</div></div></div><h3>學員教材</h3><div class="en">Student Resources</div><p>透過 Gilmore / VitalSource 註冊取得學員手冊，供課後複習使用。</p></div></div><div class="takeaway"><div class="star">⭐</div><div><h3>一句話總結</h3><p>先記住 <b>五大 Domain 的順序與主軸</b>，後續每個模組都是圍繞這張地圖展開。</p></div></div><footer>Module 0: Introduction · Exam Prep: AWS Certified AI Practitioner (AIF-C01)</footer></div></body></html>

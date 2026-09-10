@@ -1,0 +1,57 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Module 1 · AI 與 ML 基礎</title><style>
+  :root{--navy:#1b2838;--navy2:#243447;--ink:#0f1722;--orange:#ff9900;--orange-d:#e17b00;
+    --teal:#1aa9a3;--teal-d:#128b86;--paper:#f6f8fb;--card:#fff;--line:#e4e9f0;--muted:#5f6b7a;--good:#1f9d61;
+    --sh:0 2px 10px rgba(20,30,45,.06),0 10px 30px rgba(20,30,45,.05);}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+    background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1180px;margin:0 auto;padding:28px 22px 60px}
+  .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#2c4a63 100%);
+    color:#fff;border-radius:22px;padding:34px 38px;position:relative;overflow:hidden;box-shadow:var(--sh)}
+  .hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;
+    background:radial-gradient(circle,rgba(255,153,0,.28),transparent 68%)}
+  .kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:var(--orange);
+    background:rgba(255,153,0,.12);border:1px solid rgba(255,153,0,.35);padding:5px 12px;border-radius:999px}
+  h1{font-size:32px;font-weight:800;margin:14px 0 6px;letter-spacing:-.5px}
+  .hero .sub{font-size:15px;color:#c7d3e0;max-width:780px}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .chip{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    border-radius:10px;padding:8px 14px;font-size:13px;color:#e7eef6}
+  .chip b{color:#fff}
+  .obj{margin-top:14px;font-size:13px;color:#aeb9c7}.obj b{color:#ffcf8a;font-weight:700}
+  .section-h{display:flex;align-items:center;gap:12px;margin:36px 4px 16px}
+  .section-h .n{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;
+    background:var(--navy);color:#fff;font-weight:800;font-size:15px;flex:0 0 auto}
+  .section-h h2{font-size:20px;font-weight:800;letter-spacing:-.2px}
+  .section-h .en{font-size:12.5px;color:var(--muted);font-weight:600;letter-spacing:.05em}
+  .dims{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+  .dim{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 15px 14px;
+    box-shadow:var(--sh);border-top:3px solid var(--c)}
+  .dim .top{display:flex;align-items:center;gap:9px;margin-bottom:7px}
+  .dim .ic{width:30px;height:30px;border-radius:8px;display:grid;place-items:center;flex:0 0 auto;
+    background:color-mix(in srgb,var(--c) 14%,#fff);color:var(--c);font-size:16px}
+  .dim .no{font-size:11px;font-weight:800;color:var(--c);letter-spacing:.05em}
+  .dim h3{font-size:14.5px;font-weight:800;line-height:1.3}
+  .dim .en{font-size:11px;color:var(--muted);font-weight:600}
+  .dim p{font-size:12.2px;color:#48586a;margin-top:6px}
+  .dim .eg{font-size:11.4px;color:var(--muted);margin-top:7px;padding-top:7px;border-top:1px dashed var(--line)}
+  .dim .eg b{color:#3a4756}
+  .kc{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .qcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:17px;box-shadow:var(--sh)}
+  .qcard .qn{font-size:11px;font-weight:800;letter-spacing:.08em;color:var(--orange-d);text-transform:uppercase}
+  .qcard .q{font-size:13.5px;font-weight:700;margin:6px 0 10px;color:#22303f}
+  .ans{display:flex;gap:9px;align-items:flex-start;background:#edf9f1;border:1px solid #bfe6cf;border-radius:10px;padding:10px 12px}
+  .ans .ck{color:#fff;background:var(--good);width:20px;height:20px;border-radius:50%;
+    display:grid;place-items:center;font-size:12px;flex:0 0 auto;margin-top:1px}
+  .ans p{font-size:12.4px;color:#1d5138}.ans p b{color:#12492e}
+  .takeaway{margin-top:32px;background:linear-gradient(120deg,#fff7ea,#fdeede);
+    border:1px solid #f4d9a8;border-radius:16px;padding:20px 24px;display:flex;gap:15px;align-items:flex-start}
+  .takeaway .star{font-size:26px;line-height:1}
+  .takeaway h3{font-size:15px;font-weight:800;color:var(--orange-d);margin-bottom:4px}
+  .takeaway p{font-size:13.5px;color:#5a4a2e}
+  footer{margin-top:30px;text-align:center;font-size:11.5px;color:var(--muted)}
+  @media(max-width:920px){.dims{grid-template-columns:repeat(2,1fr)}.kc{grid-template-columns:1fr}h1{font-size:25px}}
+  @media(max-width:540px){.dims{grid-template-columns:1fr}}
+  @media print{body{background:#fff}.wrap{max-width:100%}.hero,.dim,.qcard{box-shadow:none}}
+</style></head><body><div class="wrap"><header class="hero"><span class="kicker">◆ Module 1 · Exam Prep: AWS Certified AI Practitioner (AIF-C01)</span><h1>AI 與 ML 基礎</h1><div class="sub">Domain 1 — 從 AI/ML/深度學習的定義到 ML 開發生命週期與評估指標。</div><div class="obj"><b>學習目標：</b> 1.1 基本概念與名詞 · 1.2 實務應用案例 · 1.3 ML 開發生命週期</div><div class="hero-meta"><span class="chip">📑 共 <b>93</b> 張投影片</span><span class="chip">🎯 <b>3</b> 個任務陳述</span><span class="chip">⭐ 考試占比最重的 Domain</span></div></header><div class="section-h"><div class="n">1</div><div><h2>重點概念</h2><div class="en">Key Concepts · AI/ML/DL 定義 → 資料型態 → 學習方式 → 生命週期 → 評估指標</div></div></div><div class="dims"><div class="dim" style="--c:#e0568a"><div class="top"><div class="ic">🧠</div><div><div class="no">01</div></div></div><h3>AI / ML / 深度學習</h3><div class="en">AI vs ML vs DL</div><p>AI 是最大範疇，ML 是其子集（從資料學習模式），深度學習是用神經網路的 ML 子集。</p><div class="eg"><b>ML 需人工選特徵，DL 可自動學特徵但成本更高</b></div></div><div class="dim" style="--c:#d64545"><div class="top"><div class="ic">🗂️</div><div><div class="no">02</div></div></div><h3>四種資料型態</h3><div class="en">Data Types</div><p>結構化（RDS/Redshift）、半結構化（JSON, DynamoDB）、非結構化（S3）、時間序列資料，各有對應儲存服務。</p></div><div class="dim" style="--c:#3b7dd8"><div class="top"><div class="ic">🎯</div><div><div class="no">03</div></div></div><h3>監督式學習</h3><div class="en">Supervised Learning</div><p>使用標記資料訓練，分為分類（二元/多元）與迴歸（連續數值）兩大問題類型。</p><div class="eg"><b>SageMaker Ground Truth 用於資料標記</b></div></div><div class="dim" style="--c:#1aa9a3"><div class="top"><div class="ic">🔍</div><div><div class="no">04</div></div></div><h3>非監督式學習</h3><div class="en">Unsupervised Learning</div><p>無標記資料，透過分群（Clustering）發現客群結構，或異常偵測找出離群值。</p><div class="eg"><b>客戶分群 · 信用卡詐騙偵測</b></div></div><div class="dim" style="--c:#7c6ce0"><div class="top"><div class="ic">🎮</div><div><div class="no">05</div></div></div><h3>強化學習</h3><div class="en">Reinforcement Learning</div><p>代理人（Agent）在環境中透過試誤（trial-and-error）行動，以最大化累積獎勵學習最佳決策。</p><div class="eg"><b>自駕車軌道訓練</b></div></div><div class="dim" style="--c:#128b86"><div class="top"><div class="ic">⚖️</div><div><div class="no">06</div></div></div><h3>過度配適 / 配適不足</h3><div class="en">Overfitting / Underfitting</div><p>過度配適：把訓練資料學太細，無法泛化新資料；配適不足：模型太簡單，訓練與新資料表現都差。</p></div><div class="dim" style="--c:#e17b00"><div class="top"><div class="ic">⏱️</div><div><div class="no">07</div></div></div><h3>即時推論 vs 批次轉換</h3><div class="en">Real-time vs Batch Inference</div><p>即時推論需持久端點、低延遲高吞吐但持續計費；批次轉換適合離線大量資料、成本效益高。</p><div class="eg"><b>SageMaker 四種推論模式：即時/批次/非同步/無伺服器</b></div></div><div class="dim" style="--c:#1b2838"><div class="top"><div class="ic">🔄</div><div><div class="no">08</div></div></div><h3>ML 生命週期</h3><div class="en">ML Development Lifecycle</div><p>定義商業目標 → 建構問題框架 → 資料處理 → 模型開發（訓練/調參/評估）→ 部署 → 監控，並持續反覆優化。</p></div><div class="dim" style="--c:#2e8b57"><div class="top"><div class="ic">🧹</div><div><div class="no">09</div></div></div><h3>資料處理三階段</h3><div class="en">Data Processing</div><p>收集（ETL、AWS Glue）→ 前處理（清理、切分 train/validate/test）→ 特徵工程（選取/轉換特徵）。</p><div class="eg"><b>AWS Glue DataBrew：點選式資料轉換</b></div></div><div class="dim" style="--c:#b0518f"><div class="top"><div class="ic">📊</div><div><div class="no">10</div></div></div><h3>分類評估指標</h3><div class="en">Classification Metrics</div><p>混淆矩陣衍生出 Accuracy、Precision、Recall、F1-score、FPR、Specificity，各自反映不同錯誤代價的重視程度。</p><div class="eg"><b>F1 平衡 Precision 與 Recall</b></div></div><div class="dim" style="--c:#c0873b"><div class="top"><div class="ic">📈</div><div><div class="no">11</div></div></div><h3>迴歸誤差指標</h3><div class="en">Regression Error Metrics</div><p>MSE 平方誤差平均、RMSE 開根號更貼近原單位、MAE 絕對誤差平均，用於評估連續值預測準確度。</p></div><div class="dim" style="--c:#3aa0a8"><div class="top"><div class="ic">🛠️</div><div><div class="no">12</div></div></div><h3>MLOps</h3><div class="en">Machine Learning Operations</div><p>將 DevOps 原則套用到 ML：IaC、版本控制、持續監控與自動重訓，SageMaker Pipelines 可端到端編排。</p></div></div><div class="section-h"><div class="n">✓</div><div><h2>隨堂測驗考點</h2><div class="en">Knowledge Checks</div></div></div><div class="kc"><div class="qcard"><div class="qn">Knowledge Check 1</div><div class="q">歷史音檔要轉文字並比對品牌關鍵字，該用哪個 AWS 服務與模式？</div><div class="ans"><div class="ck">✓</div><p><b>Amazon Transcribe 批次轉錄工作</b>（資料已存在 S3，非即時，屬離線批次情境）。</p></div></div><div class="qcard"><div class="qn">Knowledge Check 2</div><div class="q">要從文字客服回饋辨識全球情緒，該用哪個服務？</div><div class="ans"><div class="ck">✓</div><p><b>Amazon Comprehend</b>（NLP 服務，可萃取情緒、實體、關鍵詞）。</p></div></div><div class="qcard"><div class="qn">Knowledge Check 3</div><div class="q">ML 生命週期中「特徵工程」階段的最佳描述為何？</div><div class="ans"><div class="ck">✓</div><p>在資料準備階段<b>選取並轉換變數</b>以強化訓練資料集，提升模型效果。</p></div></div></div><div class="takeaway"><div class="star">⭐</div><div><h3>一句話總結</h3><p>Domain 1 是全考試地基：記牢 <b>資料型態 × 學習方式 × 生命週期階段 × 評估指標</b> 這張四維地圖。</p></div></div><footer>Module 1: Fundamentals of AI and ML · Exam Prep: AWS Certified AI Practitioner (AIF-C01)</footer></div></body></html>
